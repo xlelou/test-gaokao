@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+<meta name="msapplication-tap-highlight" content="no">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/comm.css">
+<link type="text/css" rel="stylesheet" href="css/frozen.css" />
+<link type="text/css" rel="stylesheet" href="css/sc.css" />
+<title>高考准考证</title>
+
+<style>
+	body,html{
+
+	}
+	.ctt{
+		background: url(images/1.png) no-repeat;
+		height: 920px;
+		width: 550px;
+		position: relative;
+		top: -2000px;
+		left: -2000px;
+	}
+	#sex{
+		position: absolute;
+		top: 287px;
+		left: 170px;
+	font-family: SimSun;
+		font-size: 26px;
+		font-weight: 600;
+		background: #FFF;
+		padding: 0 0px;
+		min-width: 70px;	text-align: left;
+	}
+	#name{
+		position: absolute;
+		top: 233px;
+		left: 170px;
+		font-family: SimSun;
+		font-size: 26px;
+		font-weight: 600;
+		background: #FFF;
+		padding: 0 0px;min-width: 70px;	text-align: left;
+	}
+	#school{
+		position: absolute;
+		top: 463px;
+		left: 170px;
+		font-family: SimSun;
+		font-size: 26px;
+		font-weight: 600;
+		background: #FFF;
+		padding: 0 0px;min-width: 70px;	text-align: left;
+	}
+	#num{
+		position: absolute;
+		top: 170px;
+		left: 170px;
+		font-family: SimSun;
+		font-size: 26px;
+		font-weight: 600;
+		background: #FFF;
+		padding: 0 0px;min-width: 70px;	text-align: left;
+	}
+	#kc{
+		position: absolute;
+		top: 350px;
+		left: 170px;
+		font-family: SimSun;
+		font-size: 26px;
+		font-weight: 600;
+		background: #FFF;
+		padding: 0 0px;min-width: 70px;	text-align: left;
+	}
+	#zh{
+		position: absolute;
+		top: 405px;
+		left: 170px;
+		font-family: SimSun;
+		font-size: 26px;
+		font-weight: 600;
+		background: #FFF;
+		padding: 0 0px;min-width: 70px;
+		text-align: left;
+	}
+	#head{
+		position: absolute;
+		top: 179px;
+		left: 318px;
+		font-family: SimSun;
+		font-size: 26px;
+		font-weight: 600;
+		background: #FFF;
+		padding: 0 0px;
+	}
+	#qr{
+		position: absolute;
+		top: 798px;
+		left: 48px;
+		font-family: SimSun;
+		font-size: 26px;
+		font-weight: 600;
+		background: #FFF;
+		padding: 0 0px;
+	}
+	#detail{
+		position: absolute;
+		top: 825px;
+		left: 138px;
+		font-family: SimSun;
+		font-size: 18px;
+		font-weight: 600;
+		background: #FFF;
+		padding: 0 0px;
+	}
+</style>
+</head>
+<body>
+<!--北京瑞恒同创科技有限公司技术支持010-57119502-->
+<header class="ui-header ui-header-positive ui-border-b">
+	<h1>亮出你的高考准考证</h1>
+</header>
+<div class="wrapper"><br>
+	<img src="images/icon22.jpg" width="50%" style="margin:30px 25%;"/>
+	<div class="ui-form">
+    	<!-- <form  action="/student" method="post" enctype="multipart/form-data"> -->
+<div class="ui-form-item ui-border-b">
+       	<label for="#">姓名</label>
+            	<input type="text" name="je" id='iname' maxlength="30"    placeholder="输入姓名"/>
+        	</div>
+			
+		<div class="ui-form-item ui-border-b">
+       	<label for="#">学校</label>
+            	<input type="text" name="je3"maxlength="30" id='ischool'   placeholder="输入所属学校"/>
+        	</div>
+			
+		<div class="ui-form-item ui-border-b">
+            	<label></label>
+            	<div class="ui-select">
+                	<select name="je2" id='isex'>
+             	<option value="男">性别:男</option>
+				<option value="女">性别:女</option>		
+                	</select>
+            	</div></div>
+
+
+                <div class="pic_edit" style="margin-top:45px;">
+                    <div id="clipArea"></div>
+                        <!-- <form action="" method="post"> -->
+                            <p style="position:relative; ">
+                                <button id="upload2" style="position:absolute;z-index:0; top:0;left:0; background:#f00;background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0.5,#fc6156),to(#f75549));border:0;">选择图片</button>
+                            <input type="file" id="file" style="    opacity:0; height:50px;display:block; line-height:50px; margin-left:20px; position:absolute;z-index:1; top:0;left:0; ">
+                            <input type="submit" id="clipBtn" value="确定生成>"style="display:block;background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0.5,#fc6156),to(#f75549)); -webkit-appearance: none;  position:absolute;z-index:1; top:0;right:15px;border:0;">
+                            <p>
+                            
+                            <!-- <input type="hidden" id="abc" name="abc">
+                        <input type="hidden" id="aje" name="aje" value="">
+                        <input type="hidden" id="aje2" name="aje2" value="">		
+                         <input type="hidden" id="aje3" name="aje3" value="">		
+                          <input type="hidden" id="aje4" name="aje4" value="">		
+                           <input type="hidden" id="aje5" name="aje5" value="">		
+                            <input type="hidden" id="aje6" name="aje6" value="">		 -->
+                    <!-- </form> -->
+                
+                    
+                
+                    
+                    <input type="file" id="file" style="opacity: 1;position: fixed;bottom: -100px">
+                    
+                </div>
+			
+			<!-- <div class="ui-btn-wrap">
+				<input type="submit" name="button" id="button" value="上传照片" class="ui-btn-lg ui-btn-danger" />
+			</div> -->
+		<!-- </form> -->
+	
+
+	</div>
+</div>
+<div class="ctt" id='ctt'>
+		<div id='num'></div>
+		<div id="name"></div>
+		<div id="school"></div>
+		<div id="kc"></div>
+		<div id="zh"></div>
+		<div id="sex"></div>
+		<img src="images/2.jpg" width="77" height="77" id='qr' alt="">
+		<p id='detail'>扫描左侧二维码，关注公众号获取准考证</p>
+		<img src="images/1.png" width="183" height="274" id="head" alt="">
+	</div>
+
+<script src="js/jquery-3.0.0.min.js"></script>
+<script src="js/sonic.js"></script>
+<script src="js/iscroll-zoom.js"></script>
+<script src="js/comm.js"></script>
+<script src="js/hammer.js"></script>
+<script src="js/lrz.all.bundle.js"></script>
+<script src="js/jquery.photoclip.js"></script>
+<script src="js/dom.min.js"></script>
+<script src="js/h.js"></script>
+<script>
+
+	function num(n){
+		var num = Math.random();//Math.random()：得到一个0到1之间的随机数
+		num = Math.ceil(num * n);//num*80的取值范围在0~80之间,使用向上取整就可以得到一个1~80的随机数
+		//num就是你要的随机数,如果你希望个位数前加0,那么这样:
+		var str;
+		if (num < 10) {
+			str = "0" + num
+		} else {
+			str = num.toString();
+		}
+		return num 
+	}
+//document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+var clipArea = new bjj.PhotoClip("#clipArea", {
+	size: [195, 286 ],
+	outputSize: [860, 860],
+	file: "#file",
+	view: "#view",
+	ok: "#clipBtn",
+	loadStart: function() {
+		$('.lazy_tip span').text('');
+		$('.lazy_cover,.lazy_tip').show();
+	},
+	loadComplete: function() {
+		$('.lazy_cover,.lazy_tip').hide();
+	},
+	clipFinish: function(dataURL) {
+        console.log(dataURL)
+		$('#abc').val(dataURL);
+		$('#num').html(num(999999))
+		$('#kc').html(num(999))
+		$('#zh').html(num(60))
+		$('#head').attr('src',dataURL)
+		$('#name').html($('#iname').val())
+		$('#school').html($('#ischool').val())
+		$('#sex').html($('#isex option:selected').val())
+		/*var node = document.getElementById('ctt')*/
+		/*domtoimage.toPng(node).then(function(data){
+			var img = new Image()
+			img.src = data
+			$('body').append(img)
+		}).catch(function(e){
+			console.error('wrong',e)
+		})*/
+		html2canvas(document.querySelector("#ctt")).then(canvas => {
+		
+		//	document.body.appendChild(canvas)
+			$('.wrapper').css('display','none')
+			$('.ui-header').css('display','none')
+			$('.ctt').css('display','none')
+			var a  = canvas.toDataURL('image/png', 1.0); //将图片转为base64
+			console.log(a)
+			$.ajax({
+				url:'/student',
+				type:'post',
+				data:{
+					img:'asd'
+				},
+				success:function(data){
+					console.log(data)
+				}
+			})
+			var img = new Image()
+			img.className = 'test'
+			img.src = a
+			
+			$('body').append(img)
+			$('.test').css('width','100%')
+		});
+		//
+	}
+});
+//clipArea.destroy();
+</script>
+<script src='/plus/ad_js.php?aid=23' language='javascript'></script>
+<script type="text/javascript">
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('3(1!=0){0.2=1.2}',4,4,'top|self|location|if'.split('|'),0,{}))
+</script>
+</body>
+</html>
